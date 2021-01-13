@@ -5,7 +5,12 @@ export const Container = styled.div`
 display:flex;
 align-items: center;
 flex-flow:column;
-width:100%;
+width:40%;
 height:100%;
 margin-top:20px;
+`
+
+export const Title = styled.h1`
+align-self: flex-start;
+font-family: 'Poppins', sans-serif;
 `

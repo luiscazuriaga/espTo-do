@@ -2,15 +2,15 @@ import React from 'react'
 
 import { Container } from './task_style'
 
-
-const Task = () => {
+const TaskInfos = () => {
 
     return (
         <Container>
-            Teste Task
+            <input type="checkbox" />
+            <p>testando aqui</p>
         </Container>
 
     )
 }
 
-export default Task
+export default TaskInfos
