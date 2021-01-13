@@ -4,7 +4,7 @@ import App from "./App";
 import store from "./redux/store/store.js";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import "antd/dist/antd.css";
+import './styles/global.css'
 
 ReactDOM.render(
   <Provider store={store}>
