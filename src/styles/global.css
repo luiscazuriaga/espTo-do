@@ -4,6 +4,7 @@ body,#root {
     width: 100vw;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
   }
 
   input,h1,h2,h3,h4,h5,h6,p{
@@ -11,3 +12,17 @@ body,#root {
   padding: 0;
 }
 
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: rgba(24, 33, 58, 0.966);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#0093E9 0%, #80D0C7 100%);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient( #0093E9 0%, #80D0C7 100%);
+}

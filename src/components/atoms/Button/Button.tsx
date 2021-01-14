@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
 import { ButtonBox } from './button_style'
 
 interface Props {
-    children: React.ReactNode
+    children: ReactElement
 }
 
 const Button = ({ children }: Props) => {

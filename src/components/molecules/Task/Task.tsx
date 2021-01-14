@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
 import { TaskBox } from './task_style'
 import TaskButton from '../TaskButtons/TaskButtons'
 import TaskInfos from '../../atoms/TaskInfos/Task'
 
+interface Props {
+    children: ReactElement
+}
 
-const Task = () => {
+const Task = ({ children }: Props) => {
 
     return (
         <TaskBox>
-            <TaskInfos />
+            <TaskInfos>
+                {children}
+            </TaskInfos>
             <TaskButton />
         </TaskBox>
 

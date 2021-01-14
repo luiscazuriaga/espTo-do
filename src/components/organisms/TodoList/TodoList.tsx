@@ -1,15 +1,19 @@
 import React from 'react'
 import Task from '../../molecules/Task/Task'
 import AddTask from '../../molecules/AddTask/AddTask'
-import { Container, Title } from './todoList_style'
+import { Container, Title, TaskContainer } from './todoList_style'
+import { useSelector } from 'react-redux'
 
 const TodoList = () => {
-
+    const tasks = useSelector((state: any) => state.task.tasks)
+    console.log(tasks)
     return (
         <Container>
             <Title>TodoList</Title>
-            {Array(10).fill(0).map((elem, key) => <Task key={key} />)}
-            <AddTask></AddTask>
+            <TaskContainer>
+                {tasks && tasks.map((elem: any, key: number) => <Task key={key}>{elem.desc}</Task>)}
+                <AddTask />
+            </TaskContainer>
         </Container>
 
     )
