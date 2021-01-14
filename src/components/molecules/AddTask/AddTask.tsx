@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import Button from '../../atoms/Button/Button'
 
 import { BsPlusCircle } from 'react-icons/bs'
 import { AddTaskBox } from './addTask_style'
 
+interface Props {
+    setInputTask: Dispatch<SetStateAction<boolean>>;
+}
 
-const AddTask = () => {
+const AddTask = ({ setInputTask }: Props) => {
 
     return (
-        <AddTaskBox>
+        <AddTaskBox onClick={() => setInputTask(true)}>
             <Button>
                 <BsPlusCircle />
             </Button>

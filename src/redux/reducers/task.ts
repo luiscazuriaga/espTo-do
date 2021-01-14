@@ -5,7 +5,11 @@ interface Props {
     value: object;
 }
 
-const defaultState = { tasks: [{ desc: "concertar o computador" }, { desc: "estudar mandarim" }] };
+//Original 
+//let defaultState = { tasks: [] };
+
+// Mock da task, para manter alguns dados
+let defaultState = { tasks: Array(45).fill({ desc: "Tarefas" }) };
 
 const task = (state = defaultState, { type, value }: Props) => {
     switch (type) {
